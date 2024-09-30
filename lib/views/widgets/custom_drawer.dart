@@ -1,4 +1,5 @@
 import 'package:adaptive_dash_board/models/drawer_iteam_model.dart';
+import 'package:adaptive_dash_board/models/user_info_tile_model.dart';
 import 'package:adaptive_dash_board/utils/app_images.dart';
 import 'package:adaptive_dash_board/views/widgets/custom_drawer_list_view.dart';
 import 'package:adaptive_dash_board/views/widgets/inactive_drawer_iteam.dart';
@@ -14,11 +15,13 @@ class CustomDrawer extends StatelessWidget {
       color: Colors.white,
       child: CustomScrollView(
         slivers: [
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: UserInfoListTile(
-              title: 'Lekan Okeowo',
-              subTitle: 'demo@gmail.com',
-              image: Assets.imagesAvatar3,
+              userInfoListTileModel: UserInfoTileModel(
+                image: Assets.imagesAvatar3,
+                title: 'Lekan Okeowo',
+                subtitle: 'demo@gmail.com',
+              ),
             ),
           ),
           const SliverToBoxAdapter(
