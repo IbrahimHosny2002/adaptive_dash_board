@@ -27,7 +27,7 @@ class AllExpensesIteamHeader extends StatelessWidget {
         ),
         const Spacer(),
         Transform.rotate(
-          angle: -1.57079633 * 2,
+          angle: -1.57079633 * 4,
           child: Icon(
             size: 15,
             Icons.arrow_forward_ios_outlined,

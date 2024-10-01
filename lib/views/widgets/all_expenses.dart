@@ -1,5 +1,6 @@
 import 'package:adaptive_dash_board/views/widgets/all_expenses_header.dart';
 import 'package:adaptive_dash_board/views/widgets/all_expenses_iteam_row.dart';
+import 'package:adaptive_dash_board/views/widgets/custom_background_color.dart';
 import 'package:flutter/material.dart';
 
 class AllExpenses extends StatefulWidget {
@@ -12,26 +13,14 @@ class AllExpenses extends StatefulWidget {
 class _AllExpensesState extends State<AllExpenses> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(
-        left: 16,
-        right: 16,
-        top: 16,
-      ),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: const Column(
+    return const CustomBackgroundContainer(
+      child: Column(
         children: [
           AllExpensesHeader(),
           SizedBox(
             height: 16,
           ),
           AllExpensesIteamRow(),
-          SizedBox(
-            height: 16,
-          ),
         ],
       ),
     );
