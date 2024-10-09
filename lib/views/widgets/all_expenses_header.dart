@@ -8,9 +8,9 @@ class AllExpensesHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
+        Text(
           'All Expenses',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         const Spacer(),
         Container(
@@ -20,9 +20,9 @@ class AllExpensesHeader extends StatelessWidget {
               border: Border.all(color: const Color(0xffF1F1F1))),
           child: Row(
             children: [
-              const Text(
+              Text(
                 'Monthly',
-                style: AppStyles.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               ),
               const SizedBox(
                 width: 15,

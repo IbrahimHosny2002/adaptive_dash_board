@@ -13,7 +13,7 @@ class InActiveDrawerIteam extends StatelessWidget {
       leading: SvgPicture.asset(drawerIteamModel.image),
       title: Text(
         drawerIteamModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
     );
   }

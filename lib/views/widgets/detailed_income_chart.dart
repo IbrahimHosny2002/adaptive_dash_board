@@ -29,7 +29,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             PieChartSectionData(
                 titlePositionPercentageOffset: selectedIndex == 0 ? 1.6 : null,
                 title: selectedIndex == 0 ? 'Design service' : '40%',
-                titleStyle: AppStyles.styleMedium16.copyWith(
+                titleStyle: AppStyles.styleMedium16(context).copyWith(
                   color: selectedIndex == 0 ? null : Colors.white,
                 ),
                 value: 40,
@@ -38,7 +38,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             PieChartSectionData(
                 titlePositionPercentageOffset: selectedIndex == 1 ? 2.5 : null,
                 title: selectedIndex == 1 ? 'Design product' : '25%',
-                titleStyle: AppStyles.styleMedium16.copyWith(
+                titleStyle: AppStyles.styleMedium16(context).copyWith(
                   color: selectedIndex == 1 ? null : Colors.white,
                 ),
                 value: 25,
@@ -47,7 +47,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             PieChartSectionData(
                 titlePositionPercentageOffset: selectedIndex == 2 ? 1.5 : null,
                 title: selectedIndex == 2 ? 'Product royalti' : '20%',
-                titleStyle: AppStyles.styleMedium16.copyWith(
+                titleStyle: AppStyles.styleMedium16(context).copyWith(
                   color: selectedIndex == 2 ? null : Colors.white,
                 ),
                 value: 20,
@@ -56,7 +56,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             PieChartSectionData(
               titlePositionPercentageOffset: selectedIndex == 3 ? 1.5 : null,
               title: selectedIndex == 3 ? 'Other' : '22%',
-              titleStyle: AppStyles.styleMedium16.copyWith(
+              titleStyle: AppStyles.styleMedium16(context).copyWith(
                 color: selectedIndex == 3 ? null : Colors.white,
               ),
               value: 22,

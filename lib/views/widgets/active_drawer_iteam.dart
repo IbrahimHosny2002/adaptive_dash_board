@@ -13,7 +13,7 @@ class ActiveDrawerIteam extends StatelessWidget {
       leading: SvgPicture.asset(drawerIteamModel.image),
       title: Text(
         drawerIteamModel.title,
-        style: AppStyles.styleBold16,
+        style: AppStyles.styleBold16(context),
       ),
       trailing: Container(
         color: const Color(0xff4EB7F2),

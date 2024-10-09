@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile(
-      {super.key, required this.userInfoListTileModel,
-      });
-      final UserInfoTileModel userInfoListTileModel;
+  const UserInfoListTile({
+    super.key,
+    required this.userInfoListTileModel,
+  });
+  final UserInfoTileModel userInfoListTileModel;
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +19,11 @@ class UserInfoListTile extends StatelessWidget {
         leading: SvgPicture.asset(userInfoListTileModel.image),
         title: Text(
           userInfoListTileModel.title,
-          style: AppStyles.styleSemiBold16,
+          style: AppStyles.styleSemiBold16(context),
         ),
         subtitle: Text(
           userInfoListTileModel.subtitle,
-          style: AppStyles.styleRegular12,
+          style: AppStyles.styleRegular12(context),
         ),
       ),
     );

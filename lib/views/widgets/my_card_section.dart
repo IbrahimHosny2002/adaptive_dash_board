@@ -32,7 +32,7 @@ class _MyCardSectionState extends State<MyCardSection> {
       children: [
         Text(
           'My card',
-          style: AppStyles.styleSemiBold20
+          style: AppStyles.styleSemiBold20(context)
               .copyWith(color: const Color(0xff064061)),
         ),
         const SizedBox(

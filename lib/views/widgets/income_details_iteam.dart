@@ -15,13 +15,12 @@ class IncomeDetailsIteam extends StatelessWidget {
       ),
       title: Text(
         incomeDetailsIteamModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
       trailing: Text(
         incomeDetailsIteamModel.amount,
-        style: AppStyles.styleMedium16.copyWith(
-          color: Color(0xff208CC8)
-        ),
+        style: AppStyles.styleMedium16(context)
+            .copyWith(color: const Color(0xff208CC8)),
       ),
     );
   }

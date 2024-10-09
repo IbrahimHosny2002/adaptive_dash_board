@@ -21,7 +21,7 @@ class ActiveAllExpensesIteam extends StatelessWidget {
         children: [
           AllExpensesIteamHeader(
             image: allExpensesIteamModel.image,
-            imageColor:  Colors.white,
+            imageColor: Colors.white,
             iconColor: Colors.white,
           ),
           const SizedBox(
@@ -29,14 +29,15 @@ class ActiveAllExpensesIteam extends StatelessWidget {
           ),
           Text(
             allExpensesIteamModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+            style: AppStyles.styleSemiBold16(context)
+                .copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             allExpensesIteamModel.date,
-            style: AppStyles.styleRegular14
+            style: AppStyles.styleRegular14(context)
                 .copyWith(color: const Color(0xffFAFAFA)),
           ),
           const SizedBox(
@@ -44,7 +45,8 @@ class ActiveAllExpensesIteam extends StatelessWidget {
           ),
           Text(
             allExpensesIteamModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+            style: AppStyles.styleSemiBold24(context)
+                .copyWith(color: Colors.white),
           ),
         ],
       ),
