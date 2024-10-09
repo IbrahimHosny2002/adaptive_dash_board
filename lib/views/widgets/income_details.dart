@@ -34,14 +34,12 @@ class _IncomeDetailsState extends State<IncomeDetails> {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return IncomeDetailsIteam(
-          incomeDetailsIteamModel: items[index],
-        );
-      },
+    return Column(
+      children: items
+          .map(
+            (e) => IncomeDetailsIteam(incomeDetailsIteamModel: e),
+          )
+          .toList(),
     );
   }
 }

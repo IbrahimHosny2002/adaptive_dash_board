@@ -34,17 +34,12 @@ class _TrasnsactionHistoryListViewState
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: iteams.length,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 16),
-          child: TrasnactionIteam(
-            transactionIteamModel: iteams[index],
-          ),
-        );
-      },
+    return Column(
+      children: iteams
+          .map(
+            (e) => TrasnactionIteam(transactionIteamModel: e),
+          )
+          .toList(),
     );
   }
 }
