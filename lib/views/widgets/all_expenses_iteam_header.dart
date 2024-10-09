@@ -13,15 +13,24 @@ class AllExpensesIteamHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: imageColor == Colors.white
-              ? Colors.white.withOpacity(0.1)
-              : const Color(0xffFAFAFA),
-          child: Center(
-            child: SvgPicture.asset(
-              image,
-              colorFilter: ColorFilter.mode(imageColor, BlendMode.srcIn),
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(
+              maxWidth: 60,
+            ),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: CircleAvatar(
+                backgroundColor: imageColor == Colors.white
+                    ? Colors.white.withOpacity(0.1)
+                    : const Color(0xffFAFAFA),
+                child: Center(
+                  child: SvgPicture.asset(
+                    image,
+                    colorFilter: ColorFilter.mode(imageColor, BlendMode.srcIn),
+                  ),
+                ),
+              ),
             ),
           ),
         ),

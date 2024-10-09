@@ -35,40 +35,53 @@ class _AllExpensesIteamRowState extends State<AllExpensesIteamRow> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: AllExpensesIteam(
-                    allExpensesIteamModel: item,
-                    isSelected: selectedIndex == index),
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 0;
+              });
+            },
+            child: AllExpensesIteam(
+              allExpensesIteamModel: items[0],
+              isSelected: selectedIndex == 0,
             ),
-          );
-        } else {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              child: AllExpensesIteam(
-                  allExpensesIteamModel: item,
-                  isSelected: selectedIndex == index),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 1;
+              });
+            },
+            child: AllExpensesIteam(
+              allExpensesIteamModel: items[1],
+              isSelected: selectedIndex == 1,
             ),
-          );
-        }
-      }).toList(),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+            child: AllExpensesIteam(
+              allExpensesIteamModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

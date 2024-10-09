@@ -11,10 +11,13 @@ class InactiveAllExpensesIteam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      decoration: ShapeDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,23 +30,32 @@ class InactiveAllExpensesIteam extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          Text(
-            allExpensesIteamModel.title,
-            style: AppStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesIteamModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesIteamModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesIteamModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpensesIteamModel.price,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesIteamModel.price,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),

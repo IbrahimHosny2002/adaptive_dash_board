@@ -1,8 +1,14 @@
 import 'package:adaptive_dash_board/views/dashboard_view.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const AdaptiveDashboard());
+  runApp(
+    DevicePreview(
+      enabled: false,
+      builder: (context) => const AdaptiveDashboard(),
+    ),
+  );
 }
 
 class AdaptiveDashboard extends StatelessWidget {

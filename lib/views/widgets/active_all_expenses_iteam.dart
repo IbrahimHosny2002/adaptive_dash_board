@@ -11,10 +11,13 @@ class ActiveAllExpensesIteam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: const Color(0xff4EB7F2),
-        borderRadius: BorderRadius.circular(16),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      decoration: ShapeDecoration(
+        color: const Color(0xFF4DB7F2),
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(width: 1, color: Color(0xFF4DB7F2)),
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,26 +30,35 @@ class ActiveAllExpensesIteam extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          Text(
-            allExpensesIteamModel.title,
-            style: AppStyles.styleSemiBold16(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesIteamModel.title,
+              style: AppStyles.styleSemiBold16(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesIteamModel.date,
-            style: AppStyles.styleRegular14(context)
-                .copyWith(color: const Color(0xffFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesIteamModel.date,
+              style: AppStyles.styleRegular14(context)
+                  .copyWith(color: const Color(0xffFAFAFA)),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpensesIteamModel.price,
-            style: AppStyles.styleSemiBold24(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesIteamModel.price,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),
